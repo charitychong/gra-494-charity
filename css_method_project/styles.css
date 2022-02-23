@@ -273,5 +273,25 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 
+.w3-border-bottom{
+	border-bottom:1px solid #ccc!important;
+}
+
+.l3{
+	width:24.99999%;
+}
+
+.imagecontainer {
+	padding:0 8px;
+	box-sizing: inherit;
+}
+
+.imagecontainer__images{
+	width:24.99999%;
+	margin-bottom:16px!important;
+	float: left;
+	padding:0 8px;
+}
+
 
 

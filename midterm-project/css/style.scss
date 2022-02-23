@@ -1,85 +1,239 @@
+$font-stack: 'Open Sans', sans-serif;
+$primary-color: #000;
+$primaryBtn: gray;
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  padding: 0 50px 0 50px;
+  width: 100%;
+  font-family: $font-stack;
 }
 
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-size: larger;
 }
 
 
 .header {
   display: flex;
-  width: 100%;
+  align-items: center;
+  width: 80%;
   height: 100px;
-  background-color: #333;
+  margin: 0 auto;
+  justify-content: space-around;
 }
 
 .logo {
-  color: #fff;
-
-
+  color: $primary-color;
 }
 
 .nav {
-  display: flex;
+  display: inline-flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: baseline;
 
   flex-direction: row;
   flex-grow: 1;
 
-  color: #fff;
+  color: $primary-color;
 
   }
 
-.list {
-  list-style: none;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+ul, li {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    .list__item {
+      margin-left: 20px;
+    }
+}
+
+
+a, a:link, a:visited {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: red;
+  }
 
 }
 
-a:link, a:visited, .list__item {
-  margin: 10px;
-  color: white;
-}
 
-a:hover {
-  color: black;
-}
-
-.btn {
-  background-color: red;
+button {
   border: none;
-  color: white;
   padding: 5px 5px;
   text-align: center;
-  
+  background-color: $primaryBtn;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: red;
+  }
 }
 
 .landing {
-  height: 400px;
+  height: 600px;
   background-color: #444;
-  display: flex;
-  position: relative;
+  background-size: contain;
+  margin: 0 auto;
+  display: grid;
 
   .landing__h1 {
-    padding-left: 50px;
-    padding-top: 175px;
-    position: absolute;
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+    h1 {
+      z-index: 1;
+    }
+
+    .img01 {
+      width: 400px;
+      height: 400px;
+      background-color: #fff;
+      
+      position: absolute;
+      margin: 0 auto;
+      right: 10%;
+      transform: translate(0,-50%);
+    }
   }
 
-  .img01 {
-    width: 260px;
-    height: 260px;
-    background-color: #fff;
-    margin-left: 385px;
-    margin-top: 50px;
-  
+
+
+
+}
+
+.highlight1 {
+  width: 100%;
+  height: 600px;
+  background-color: $primary-color;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+ 
+  .highlight1__callout {
+    width: 70%;
+    background-color: #222;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    top: 80%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      width: 80%;
+    }
   }
+
+}
+
+
+.highlight2 {
+  width: 80%;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+
+  margin: auto;
+  padding-top: 250px;
+
+  
+
+  .highlight2__article {
+   flex-basis: calc(50% - 1rem);
+   flex-shrink: 0;
+   flex-grow: 0;
+   margin: 0.5rem;
+
+  }
+
+  .highlight2__image {
+    flex-basis: calc(50% - 1rem);
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: 0.5rem;
+    height: 400px;
+    background-color: #eee;
+   }
+
+
+  .highlight2__videocontainer {
+   flex-basis: calc(50% - 1rem);
+   flex-shrink: 0;
+   flex-grow: 0;
+   margin: 0.5rem;
+   height: 400px;
+   }
+
+  
+}
+
+.highlight3{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
+
+  h1 {
+    text-align: center;
+  }
+
+  .news {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;  
+  }
+
+  .news__article {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc(25% - 2rem);
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+    p {
+      width: 90%;
+    }
+  }
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+    
+  }
+
+  .highlight2, .footer, .highlight3, .news {
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+  }
+
 
 
 }
