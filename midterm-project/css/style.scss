@@ -1,15 +1,12 @@
 $font-stack: 'Open Sans', sans-serif;
-$primary-color: #000;
-$primaryBtn: gray;
+$primary-color: #fff1e6;
+$secondary-color: #f9b77a;
+$primaryBtn: #f9b77a;
+
 
 body {
   width: 100%;
   font-family: $font-stack;
-}
-
-
-h1 {
-  font-size: larger;
 }
 
 
@@ -23,7 +20,7 @@ h1 {
 }
 
 .logo {
-  color: $primary-color;
+  color: #222;
 }
 
 .nav {
@@ -34,7 +31,7 @@ h1 {
   flex-direction: row;
   flex-grow: 1;
 
-  color: $primary-color;
+  color: #222;
 
   }
 
@@ -46,13 +43,13 @@ ul, li {
     padding: 0;
 
     .list__item {
-      margin-left: 20px;
+      margin: 0.5rem;
     }
 }
 
 
 a, a:link, a:visited {
-  color: $primary-color;
+  color: #222;
   text-decoration: none;
 
   &:hover {
@@ -64,9 +61,10 @@ a, a:link, a:visited {
 
 button {
   border: none;
-  padding: 5px 5px;
+  padding: 0.5rem 1rem;
   text-align: center;
   background-color: $primaryBtn;
+  border-radius: 0.5rem;
   cursor: pointer;
 
   &:hover {
@@ -111,13 +109,14 @@ button {
 .highlight1 {
   width: 100%;
   height: 600px;
-  background-color: $primary-color;
-  background-image: url(../images/logo.png);
+  background-color: #222;
+  background-image: url(../images/Bread.JPG);
+  background-size: cover;
   background-repeat: no-repeat;
  
   .highlight1__callout {
     width: 70%;
-    background-color: #222;
+    background-color: $primary-color;
     margin: auto;
     position: relative;
     align-items: center;
@@ -125,6 +124,7 @@ button {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
 
     p {
       width: 80%;
@@ -141,6 +141,7 @@ button {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: space-between;
+  align-items: center;
 
   margin: auto;
   padding-top: 250px;
@@ -148,7 +149,7 @@ button {
   
 
   .highlight2__article {
-   flex-basis: calc(50% - 1rem);
+   flex-basis: calc(50% - 2rem);
    flex-shrink: 0;
    flex-grow: 0;
    margin: 0.5rem;
@@ -156,21 +157,24 @@ button {
   }
 
   .highlight2__image {
-    flex-basis: calc(50% - 1rem);
+    flex-basis: calc(50% - 2rem);
     flex-shrink: 0;
     flex-grow: 0;
     margin: 0.5rem;
-    height: 400px;
-    background-color: #eee;
+    min-height: 400px;
+    background-image: url(../images/Bread7.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#fff;
    }
 
 
   .highlight2__videocontainer {
-   flex-basis: calc(50% - 1rem);
+   flex-basis: calc(50% - 2rem);
    flex-shrink: 0;
    flex-grow: 0;
    margin: 0.5rem;
-   height: 400px;
    }
 
   
@@ -191,11 +195,11 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;  
+    margin-top: 5rem;  
   }
 
   .news__article {
-    background-color: #eee;
+    background-color: $primary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,7 +227,7 @@ button {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   body {
     background-color: lightblue;
     
@@ -236,4 +240,96 @@ button {
 
 
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* font stuff */
+
+
+html, .root {
+  font-size: 15px;
+  line-height: 22px;
+}
+body, .article {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.4666667rem;
+  margin: auto;
+
+  width: 100%;
+  font-family: $font-stack;
+
+}
+h1, .h1 {
+  font-size: 4.0666667rem;
+  line-height: 4.4rem;
+  margin-top: 1.4666667rem;
+  margin-bottom: 0rem;
+}
+h2, .h2 {
+  font-size: 2.5333333rem;
+  line-height: 2.9333333rem;
+  margin-top: 2.9333334rem;
+  margin-bottom: 1.4666667rem;
+}
+h3, .h3 {
+  font-size: 1.6rem;
+  line-height: 2.9333333rem;
+  margin-top: 1.4666667rem;
+  margin-bottom: 0rem;
+}
+h4, .h4 {
+  font-size: 1rem;
+  line-height: 1.4666667rem;
+  margin-top: 1.4666667rem;
+  margin-bottom: 0rem;
+}
+h5, .h5 {
+  font-size: 1rem;
+  line-height: 1.4666667rem;
+  margin-top: 1.4666667rem;
+  margin-bottom: 0rem;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0rem;
+  margin-bottom: 1.4666667rem;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
 }
