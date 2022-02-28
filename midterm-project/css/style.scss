@@ -2,11 +2,14 @@ $font-stack: 'Open Sans', sans-serif;
 $primary-color: #fff1e6;
 $secondary-color: #f9b77a;
 $primaryBtn: #f9b77a;
+$fontcolor: #352f2b;
 
 
 body {
   width: 100%;
   font-family: $font-stack;
+  color: $fontcolor;
+  cursor: url("../images/cursor.png"), default;
 }
 
 
@@ -17,11 +20,27 @@ body {
   height: 100px;
   margin: 0 auto;
   justify-content: space-around;
+
 }
 
-.logo {
-  color: #222;
+.header__logo {
+  width: 10%;
+  height: 70%;
+  background-image: url(../images/Bread5.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left 0 center;
+
+  &:hover {
+    background-image: url(../images/Bread3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left 0 center;
+    transition: 0.5s;
+  }
+  
 }
+
 
 .nav {
   display: inline-flex;
@@ -30,8 +49,6 @@ body {
 
   flex-direction: row;
   flex-grow: 1;
-
-  color: #222;
 
   }
 
@@ -44,16 +61,24 @@ ul, li {
 
     .list__item {
       margin: 0.5rem;
+    
+      .list__item--icon {
+        width: 2rem;
+        height: 2rem;
+      }
     }
+
+    
 }
 
 
 a, a:link, a:visited {
-  color: #222;
+  color: $fontcolor;
   text-decoration: none;
 
   &:hover {
-    color: red;
+    color: $secondary-color;
+    transition: 0.5s;
   }
 
 }
@@ -65,18 +90,22 @@ button {
   text-align: center;
   background-color: $primaryBtn;
   border-radius: 0.5rem;
-  cursor: pointer;
+  cursor: url("../images/cursor.png"), default;
 
   &:hover {
     color: white;
-    background-color: red;
+    background-color: $fontcolor;
+    transition: 0.5s;
   }
 }
 
 .landing {
-  height: 600px;
-  background-color: #444;
-  background-size: contain;
+  height: 800px;
+  background-color: #fff;
+  background-image: url(../images/wheat.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   margin: 0 auto;
   display: grid;
 
@@ -93,11 +122,16 @@ button {
       width: 400px;
       height: 400px;
       background-color: #fff;
+      background-image: url(../images/sexybakers.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
       
       position: absolute;
       margin: 0 auto;
       right: 10%;
-      transform: translate(0,-50%);
+      transform: translate(0,-35%);
     }
   }
 
@@ -108,8 +142,8 @@ button {
 
 .highlight1 {
   width: 100%;
-  height: 600px;
-  background-color: #222;
+  max-height: 1000px;
+  background-color: #fff;
   background-image: url(../images/Bread.JPG);
   background-size: cover;
   background-repeat: no-repeat;
@@ -118,13 +152,15 @@ button {
     width: 70%;
     background-color: $primary-color;
     margin: auto;
-    position: relative;
     align-items: center;
-    top: 80%;
-    justify-content: center;
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    transform: translate(0%, 50%);
+
+    h2 {
+      text-align: center;
+    }
 
     p {
       width: 80%;
@@ -141,10 +177,9 @@ button {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: space-between;
-  align-items: center;
 
   margin: auto;
-  padding-top: 250px;
+  margin-top: 20rem;
 
   
 
@@ -158,6 +193,7 @@ button {
 
   .highlight2__image {
     flex-basis: calc(50% - 2rem);
+    width: 100%;
     flex-shrink: 0;
     flex-grow: 0;
     margin: 0.5rem;
@@ -224,19 +260,42 @@ button {
   align-items: center;
   width: 80%;
   margin: 0 auto;
+
 }
 
 
+
+/* media queries */
+
+
 @media only screen and (max-width: 800px) {
-  body {
-    background-color: lightblue;
-    
-  }
 
   .highlight2, .footer, .highlight3, .news {
     flex-direction: column !important;
     flex-wrap: nowrap;
   }
+
+  .highlight2, .highlight3, .header, .footer {
+    width: 90%;
+  }
+
+  .highlight1 {
+    .highlight1__callout {
+      transform: translate(0%,0%);
+    }
+  }
+
+  .highlight2 {
+    margin-top: 10rem;
+  }
+
+  .footer {
+    p, ul {
+      margin: 0;
+    }
+  }
+
+
 
 
 
@@ -260,54 +319,56 @@ button {
 
 /* font stuff */
 
-
 html, .root {
   font-size: 15px;
-  line-height: 22px;
+  line-height: 26px;
 }
 body, .article {
-  font-family: sans-serif;
-  font-size: 1rem;
-  line-height: 1.4666667rem;
-  margin: auto;
-
-  width: 100%;
   font-family: $font-stack;
-
+  font-size: 1rem;
+  line-height: 1.7333333rem;
+  width: 100%;
+  margin: auto;
 }
 h1, .h1 {
+  font-family: 'Open Sans', sans-serif;
+  
   font-size: 4.0666667rem;
-  line-height: 4.4rem;
-  margin-top: 1.4666667rem;
+  line-height: 5.2rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
 }
 h2, .h2 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 2.5333333rem;
-  line-height: 2.9333333rem;
-  margin-top: 2.9333334rem;
-  margin-bottom: 1.4666667rem;
+  line-height: 3.4666667rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 h3, .h3 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
-  line-height: 2.9333333rem;
-  margin-top: 1.4666667rem;
+  line-height: 1.7333333rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
 }
 h4, .h4 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  line-height: 1.4666667rem;
-  margin-top: 1.4666667rem;
+  line-height: 1.7333333rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
 }
 h5, .h5 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  line-height: 1.4666667rem;
-  margin-top: 1.4666667rem;
+  line-height: 1.7333333rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
 }
 p, ul, ol, pre, table, blockquote {
-  margin-top: 0rem;
-  margin-bottom: 1.4666667rem;
+  margin-top: 1.5333333rem;
+  margin-bottom: 1.5333333rem;
 }
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0rem;
