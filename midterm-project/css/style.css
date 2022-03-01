@@ -110,11 +110,13 @@ button:hover {
 
 .highlight1 {
   width: 100%;
+  min-height: 300px;
   max-height: 1000px;
   background-color: #fff;
   background-image: url(../images/Bread.JPG);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .highlight1 .highlight1__callout {
   width: 70%;
@@ -206,7 +208,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  margin: 0 auto;
+  margin: 10rem auto 0;
 }
 
 /* media queries */
