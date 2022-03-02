@@ -1,8 +1,9 @@
 body {
+  margin: 0;
   width: 100%;
   font-family: "Open Sans", sans-serif;
-  color: #352f2b;
-  cursor: url("../images/cursor.png"), default;
+  color: #272321;
+  cursor: url("../images/cursor2.png"), default;
 }
 
 .header {
@@ -38,27 +39,12 @@ body {
   flex-grow: 1;
 }
 
-ul, li {
-  list-style: none;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-ul .list__item, li .list__item {
-  margin: 0.5rem;
-}
-ul .list__item .list__item--icon, li .list__item .list__item--icon {
-  width: 2rem;
-  height: 2rem;
-}
-
 a, a:link, a:visited {
-  color: #352f2b;
+  color: #272321;
   text-decoration: none;
 }
 a:hover, a:link:hover, a:visited:hover {
-  color: #f9b77a;
+  color: #423e3a;
   transition: 0.5s;
 }
 
@@ -72,14 +58,13 @@ button {
 }
 button:hover {
   color: white;
-  background-color: #352f2b;
+  background-color: #272321;
   transition: 0.5s;
 }
 
 .landing {
   height: 800px;
-  background-color: #fff;
-  background-image: url(../images/wheat.jpg);
+  background-color: #423e3a;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -90,13 +75,14 @@ button:hover {
   width: 80%;
   margin: auto;
   display: flex;
+  color: #fff;
 }
 .landing .landing__h1 h1 {
   z-index: 1;
 }
 .landing .landing__h1 .img01 {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   background-color: #fff;
   background-image: url(../images/sexybakers.jpg);
   background-size: cover;
@@ -148,14 +134,14 @@ button:hover {
   flex-basis: calc(50% - 2rem);
   flex-shrink: 0;
   flex-grow: 0;
-  margin: 0.5rem;
+  margin: 1rem;
 }
 .highlight2 .highlight2__image {
   flex-basis: calc(50% - 2rem);
   width: 100%;
   flex-shrink: 0;
   flex-grow: 0;
-  margin: 0.5rem;
+  margin: 1rem;
   min-height: 400px;
   background-image: url(../images/Bread7.webp);
   background-size: contain;
@@ -167,7 +153,7 @@ button:hover {
   flex-basis: calc(50% - 2rem);
   flex-shrink: 0;
   flex-grow: 0;
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
 .highlight3 {
@@ -185,6 +171,11 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 5rem;
+  max-width: 100%;
+}
+.highlight3 .news > * {
+  flex: 1 200px;
+  margin: 1rem;
 }
 .highlight3 .news__article {
   background-color: #fff1e6;
@@ -192,14 +183,9 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-basis: calc(25% - 2rem);
-  flex-shrink: 0;
-  flex-grow: 0;
-  margin: 0.5rem;
-  padding: 0.5rem;
 }
 .highlight3 .news__article p {
-  width: 90%;
+  width: 80%;
 }
 
 .footer {
@@ -212,7 +198,109 @@ button:hover {
 }
 
 /* media queries */
+@media only screen and (min-width: 800px) {
+  .mobilenav {
+    display: none;
+  }
+
+  ul, li {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  ul .list__item, li .list__item {
+    margin: 0.5rem;
+  }
+  ul .list__item .list__item--icon, li .list__item .list__item--icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 @media only screen and (max-width: 800px) {
+  .header {
+    display: none;
+  }
+
+  .mobilenav {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .mobilenav ul, .mobilenav .mobilenav__items {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+  }
+  .mobilenav ul a {
+    text-align: right;
+    display: block;
+    padding: 1.5rem;
+  }
+  .mobilenav ul a:hover {
+    background-color: #333;
+  }
+  .mobilenav .mobilenav__items {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+  .mobilenav .mobilenav__btn--icon {
+    padding: 2rem;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+  .mobilenav .burgerline {
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: 0.2s ease-out;
+  }
+  .mobilenav .burgerline:before {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 0.2s ease-out;
+    top: 5px;
+  }
+  .mobilenav .burgerline:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    top: -5px;
+  }
+  .mobilenav .mobilenav__btn {
+    display: none;
+  }
+  .mobilenav .mobilenav__btn:checked ~ .mobilenav__items {
+    max-height: 240px;
+  }
+  .mobilenav .mobilenav__btn:checked ~ .mobilenav__btn--icon .burgerline {
+    background: transparent;
+  }
+  .mobilenav .mobilenav__btn:checked ~ .mobilenav__btn--icon .burgerline:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .mobilenav .mobilenav__btn:checked ~ .mobilenav__btn--icon .burgerline:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
   .highlight2, .footer, .highlight3, .news {
     flex-direction: column !important;
     flex-wrap: nowrap;
@@ -230,8 +318,20 @@ button:hover {
     margin-top: 10rem;
   }
 
-  .footer p, .footer ul {
+  .footer p, .footer ul, .footer li {
     margin: 0;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .footer .list__item {
+    margin: 0.5rem;
+  }
+  .footer .list__item .list__item--icon {
+    width: 2rem;
+    height: 2rem;
   }
 }
 /* font stuff */
