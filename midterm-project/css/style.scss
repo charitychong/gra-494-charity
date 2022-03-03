@@ -1,7 +1,6 @@
 $font-stack: 'Open Sans', sans-serif;
-$primary-color: #fff1e6;
-$secondary-color: #423e3a;
-$primaryBtn: #f9b77a;
+$primary-color: #fff0e4;
+$primaryBtn: #d69457;
 $fontcolor: #272321;
 
 
@@ -60,7 +59,7 @@ a, a:link, a:visited {
   text-decoration: none;
 
   &:hover {
-    color: $secondary-color;
+    color: $primaryBtn;
     transition: 0.5s;
   }
 
@@ -76,7 +75,7 @@ button {
   cursor: url("../images/cursor.png"), default;
 
   &:hover {
-    color: white;
+    color: $primary-color;
     background-color: $fontcolor;
     transition: 0.5s;
   }
@@ -84,19 +83,23 @@ button {
 
 .landing {
   height: 800px;
-  background-color: $secondary-color;
-
+  background-color: $primaryBtn;
+  background-image: url(../images/landing.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   margin: 0 auto;
   display: grid;
+  overflow: hidden;
 
-  .landing__h1 {
+  .landing__container {
     width: 80%;
     margin: auto;
     display: flex;
-    color: #fff;
+    color: $fontcolor;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 
     h1 {
       z-index: 1;
@@ -105,17 +108,14 @@ button {
     .img01 {
       width: 500px;
       height: 500px;
-      background-color: #fff;
-      background-image: url(../images/sexybakers.jpg);
-      background-size: cover;
+    
+      background-image: url(../images/sexybakers.png);
+      background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center;  
 
       
-      position: absolute;
-      margin: 0 auto;
-      right: 10%;
-      transform: translate(0,-35%);
+
     }
   }
 
@@ -129,14 +129,14 @@ button {
   min-height: 300px;
   max-height: 1000px;
   background-color: #fff;
-  background-image: url(../images/Bread.JPG);
+  background-image: url(../images/wheat.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
  
   .highlight1__callout {
     width: 70%;
-    background-color: $primary-color;
+    background-color: rgba($primary-color, $alpha: 1.0);
     margin: auto;
     align-items: center;
     display: flex;
@@ -144,13 +144,13 @@ button {
     padding: 2rem;
     transform: translate(0%, 50%);
 
-    h2 {
-      text-align: center;
-    }
+  }
+  h2 {
+    text-align: center;
+  }
 
-    p {
-      width: 80%;
-    }
+  p {
+    width: 80%;
   }
 
 }
@@ -173,8 +173,7 @@ button {
    flex-basis: calc(50% - 2rem);
    flex-shrink: 0;
    flex-grow: 0;
-   margin: 1rem;
-
+   margin: 1rem; 
 
   }
 
@@ -223,7 +222,7 @@ button {
   }
 
   .news>* {
-    flex: 1 200px;
+    flex: 1 220px;
     margin: 1rem;
   }
 
@@ -233,7 +232,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    border-radius: 1rem;
    
 
     p {
@@ -287,12 +286,24 @@ button {
     display: none;
   }
 
+
   .mobilenav {
     width: 100%;
     position: fixed;
     z-index: 3;
     display: block;
-    background-color: rgba($color: #fff, $alpha: 0.8);
+    background-color: rgba($color: #fff, $alpha: 0.7);
+
+    .mobilenav__logo {
+      float: left;
+      margin: 10px;
+      min-width: 40px;
+      min-height: 40px;
+      background-image: url(../images/Bread5.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left 0 center;
+    }
 
     ul, .mobilenav__items {
       margin: 0;
@@ -308,6 +319,7 @@ button {
 
       &:hover {
         background-color: #333;
+        color: $primary-color;
       }
     }
 
@@ -379,12 +391,11 @@ button {
 
 
 
-
   }
     
 
 
-  .highlight2, .footer, .highlight3, .news {
+  .highlight2, .footer, .highlight3, .news, .landing, .landing__container {
     flex-direction: column !important;
     flex-wrap: nowrap;
   }
@@ -395,8 +406,11 @@ button {
 
   .highlight1 {
     .highlight1__callout {
+      width: auto;
       transform: translate(0%,0%);
+      background-color: rgba($primary-color, $alpha: 0.9);
     }
+    
   }
 
   .highlight2 {
