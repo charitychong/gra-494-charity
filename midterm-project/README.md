@@ -1,25 +1,19 @@
-# Getting Started
+<h1 align="center">Hi 👋, I'm Charity</h1>
+<h3 align="center">A senior student at ASU</h3>
 
-Welcome to this basic HTML5 and Repository/Version Control starters guide.
+- 🔭 I’m currently working on [GRA494: Front-End Design and Development](https://github.com/charitychong/gra-494-charity)
 
-## What is in a Read Me?
+- 🌱 I’m currently learning **Front-End development**
 
-For more info on the purpose of a README.ms file and best practices, check out [this resource](https://www.makeareadme.com/). You can also check [here](https://www.markdownguide.org/basic-syntax/) for basic markdown syntax. Markdown is the industry standard language for writing a README file.
+- 👨‍💻 All of my projects are available at [https://charitychong.com](https://charitychong.com)
 
-## Getting Started Next Steps
+- 📫 How to reach me **charitychongha@gmail.com**
 
-* Choose a google font of your choice and add to your project following [these guidelines](https://fonts.google.com/knowledge/using_type/using_web_fonts).
-* Add a second google font. Set one as the default font for header elements and the other for all other text. For those of you without prior HTML experience, [this cheat sheet](https://htmlcheatsheet.com/) is a good resource.
-* Add a reset style sheet to your project. Some good starting options are [reset css](https://meyerweb.com/eric/tools/css/reset/) and [normalize.css](https://necolas.github.io/normalize.css/). You can read about the consept behind and purpose of a reset style sheet [here](https://cssdeck.com/blog/what-is-a-css-reset/).
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://linkedin.com/in/charity-chong" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="charity-chong" height="30" width="40" /></a>
+<a href="https://instagram.com/choritychang" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="choritychang" height="30" width="40" /></a>
+</p>
 
-## Changes to one file in two branches
-
-When merging two branches with git, git attempts to reconcile the differences in the files on its own. When it is unable to do so, it flags the significant differences between changed files as conflicts. It is up to you or the person managing the repo to manually correct these conflicts before the merge can be completed.
-
-If one file has been changed in more than one branch, attempting to merge those branches will cause a conflict in that file. This is because the branches have diverged from one another. Had the file only had changes in the new branch, git whould see these changes as a continuation of master. It then would have been able to "Fast-forward" and would not have created a conflict.
-
-## Changes to one file in two branches
-
-When merging two branches with git, git attempts to reconcile the differences in the files on its own. When it is unable to do so, it flags the significant differences between changed files as conflicts. It is up to you or the person managing the repo to manually correct these conflicts before the merge can be completed.# gra-494-charity
-
-If one file has been changed in more than one branch, attempting to merge those branches will cause a conflict in that file. This is because the branches have diverged from one another. Had the file only had changes in the new branch, git whould see these changes as a continuation of master. It then would have been able to "Fast-forward" and would not have created a conflict.
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/adobe-xd.svg" alt="xd" width="40" height="40"/> </a> </p>
