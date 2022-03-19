@@ -85,7 +85,7 @@ a:hover, a:link:hover, a:visited:hover {
   min-height: 300px;
   max-height: 1000px;
   background-color: #fff;
-  background-image: url(../images/wheat.JPG);
+  background-image: url(../images/wheat.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -221,6 +221,18 @@ a:hover, a:link:hover, a:visited:hover {
   }
 }
 @media only screen and (max-width: 800px) {
+  .button {
+    padding: 1rem;
+    text-align: center;
+    background-color: #d69457;
+    border-radius: 0.5rem;
+  }
+  .button:hover {
+    color: #fff0e4;
+    background-color: #171716;
+    transition: 0.5s;
+  }
+
   .header {
     display: none;
   }

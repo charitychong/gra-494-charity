@@ -115,7 +115,7 @@ a, a:link, a:visited {
   min-height: 300px;
   max-height: 1000px;
   background-color: #fff;
-  background-image: url(../images/wheat.JPG);
+  background-image: url(../images/wheat.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -266,6 +266,7 @@ a, a:link, a:visited {
     
     }  
   }
+  
   .button {
     padding: 1rem;
     text-align: center;
@@ -285,6 +286,20 @@ a, a:link, a:visited {
 }
 
 @media only screen and (max-width: 800px) {
+
+  .button {
+    padding: 1rem;
+    text-align: center;
+    background-color: $primaryBtn;
+    border-radius: 0.5rem;
+     
+   &:hover {
+      color: $primary-color;
+      background-color: $fontcolor;
+      transition: 0.5s;
+
+   }
+  }
 
   .header {
     display: none;
@@ -396,7 +411,7 @@ a, a:link, a:visited {
 
 
   }
-    
+  
 
 
   .two-col, .footer, .highlight3, .news, .landing, .landing__container {
