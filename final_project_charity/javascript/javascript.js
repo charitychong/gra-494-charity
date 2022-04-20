@@ -63,4 +63,61 @@
   
   });
   
+  $( document ).ready(function() {
+  var bgColorArray = ['imgs/001.jpg','imgs/002.jpg', 'imgs/003.jpg', 'imgs/004.jpg', 'imgs/005.jpg'],
+  selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+$('#random-shit').css('background', 'url(' + selectBG + ')')
+  });
+
+
+
+
+  /*
+  function displayText() {
+    var text = document.getElementById("fname").innerHTML;
+ 
+    var output = document.getElementById("first-name");
+    output.innerHTML = text;
+
+    alert(text)
+   };
+
+  */
   
+  $("#myForm").submit(function(e) {
+    e.preventDefault();
+});
+  
+
+
+function displayText(){
+  // Selecting the input element and get its value --- FIRST NAME
+  var text = document.getElementById("fname").value;
+  
+  // Displaying the value
+  var output = document.getElementById("first-name");
+  output.innerHTML = text;
+
+
+
+  // Selecting the input element and get its value --- LAST NAME
+  var text2 = document.getElementById("lname").value;
+  
+  // Displaying the value
+  var output2 = document.getElementById("last-name");
+  output2.innerHTML = text2;
+
+
+
+  // Selecting the input element and get its value --- MESSAGE
+  var text3 = document.getElementById("message").value;
+  
+  // Displaying the value
+  var output3 = document.getElementById("message-content");
+  output3.innerHTML = text3;
+
+
+}
+
+

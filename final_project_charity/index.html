@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
 <!-- body -->
 <body>
   <!-- header -->
@@ -45,8 +46,9 @@
 
   <!-- banner -->
   <section class="banner">
-    <div class="banner__content">
-      <div class="banner__img" alt="mouse flying with bubbles"></div>
+    <div class="banner__content"></div>
+        <div id="random-shit" alt="random image" src="imgs/" ></div>
+      
       <div class="banner__article">
         <h3 class="banner__article__title">Spirited Away</h3>
         <p class="banner__article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -117,6 +119,44 @@
           </div>
         </div>
       </div>
+    </section>
+
+
+    <!-- icon section -->
+    <section class="icon-section__wrapper">
+      <ul class="icon-section">
+
+        <li class="icon-wrapper">
+          <img src="imgs/sootsprite-01.svg" class="ghibli-icon">
+          <p><span class="underline"><strong>Lorem ipsum</strong></span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </li>
+
+        <li class="icon-wrapper">
+          <img src="imgs/sootsprite-02.svg" class="ghibli-icon">
+          <p><span class="underline"><strong>Lorem ipsum</strong></span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </li>
+
+        <li class="icon-wrapper">
+          <img src="imgs/sootsprite-03.svg" class="ghibli-icon">
+          <p><span class="underline"><strong>Lorem ipsum</strong></span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </li>
+
+        <li class="icon-wrapper">
+          <img src="imgs/sootsprite-04.svg"  class="ghibli-icon">
+          <p><span class="underline"><strong>Lorem ipsum</strong></span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </li>
+
+        <li class="icon-wrapper">
+          <img src="imgs/sootsprite-05.svg"  class="ghibli-icon">
+          <p><span class="underline"><strong>Lorem ipsum</strong></span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </li>
+
+        <li class="icon-wrapper">
+          <img src="imgs/sootsprite-06.svg" class="ghibli-icon">
+          <p><span class="underline"><strong>Lorem ipsum</strong></span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </li>
+
+      </ul>
     </section>
 
       <!-- video section -->
@@ -208,15 +248,15 @@
           </p>
         </div>
         
-          <form id="myForm"  target="output_frame" action="https://charitychong.github.io/gra-494-charity/final_project_charity/index.html" method="POST">
+          <form id="myForm" method="POST" name="myForm">
             <h3 class="article2__title">Contact Us</h3>
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname"><br>
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname"><br>
             <label for="lname">Type your message here:</label><br>
-            <textarea name="message" rows="10" cols="30"></textarea><br>
-            <input type="submit" id ="submit" value="Submit">
+            <textarea name="message" id="message" rows="10" cols="30"></textarea><br>
+            <input type="submit" id ="submit" value="Submit" onclick="displayText()">
           </form>
 
             <div class="contactform-overlay">
@@ -227,8 +267,16 @@
                   </div>
 
                 <div class="contain-wrapper">
-                  <iframe name="output_frame" id="contact-submit" src="">
-                  </iframe>
+
+                  <div class="output" id="contact-submit">
+                  
+                    <p id="first-name"></p>
+   
+                    <p id="last-name"></p>
+            
+                    <p id="message-content"></p>
+                    <p>Thanks for submitting!</p>
+                  </div>
                 </div>
               
             </div>

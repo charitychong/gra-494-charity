@@ -208,13 +208,24 @@ button:hover {
 }
 
 /* BANNER */
-.banner__img {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.507), rgba(0, 172, 240, 0.671)), url("../imgs/mouseflying.gif");
+.banner__content {
+  background-image: linear-gradient(to bottom, rgba(0, 172, 240, 0.048), white);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 500px;
+  height: 800px;
+  z-index: 1;
+  position: absolute;
+}
+
+#random-shit {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: relative;
 }
 
 .banner__article {
@@ -227,6 +238,8 @@ button:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
+  z-index: 2;
+  position: relative;
 }
 
 .banner__article__title {
@@ -387,12 +400,6 @@ button:hover {
   right: 30px;
 }
 
-.contain-wrapper {
-  display: flex;
-  justify-content: center;
-  transform: translateY(50%);
-}
-
 /* CARDS */
 .cards {
   background-color: #DFE0CB;
@@ -441,6 +448,38 @@ button:hover {
   padding-bottom: 10px;
 }
 
+/* ICON SECTION */
+.icon-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10%;
+  flex-wrap: wrap;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-basis: calc(50% - 2rem);
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.ghibli-icon {
+  margin-right: 1rem;
+  transition: transform 0.2s;
+}
+.ghibli-icon:hover {
+  transform: scale(1.2);
+}
+
 /* CONTACT FORM */
 #contact-form {
   display: flex;
@@ -485,12 +524,40 @@ form input[type=text], form textarea {
   right: 30px;
 }
 
+.contain-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.output p {
+  text-align: center;
+}
+
 #contact-submit {
   background: white;
+  filter: drop-shadow(2px 2px 5px #cfcfcf);
   border-radius: 5px;
   width: 80%;
-  max-height: 50%;
+  height: auto;
   margin: 0 auto;
+  position: absolute;
+  transform: translate(0, 85%);
+}
+
+#first-name, #last-name, #message-content {
+  display: flex;
+  width: 60%;
+  height: 50px;
+  margin: auto;
+  align-content: center;
+  align-items: center;
 }
 
 /* FOOTER */
@@ -630,6 +697,22 @@ form input[type=text], form textarea {
 
   .article2__title {
     font-size: 25px;
+  }
+
+  .icon-section__wrapper {
+    flex-direction: column;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+    margin-top: 20%;
+  }
+
+  .icon-section {
+    flex-direction: column;
+    margin-bottom: 20%;
+    margin-top: 20%;
+    columns: 1;
+    padding: 0;
   }
 
   .footer {
