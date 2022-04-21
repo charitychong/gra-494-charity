@@ -528,6 +528,7 @@ form input[type=text], form textarea {
   display: flex;
   justify-content: center;
   position: relative;
+  transform: translate(0, 50%);
   align-items: center;
 }
 
