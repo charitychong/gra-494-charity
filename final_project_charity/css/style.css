@@ -311,8 +311,8 @@ button:hover {
   background-size: cover;
   cursor: grab;
   background-position: center;
-  width: 80%;
   position: relative;
+  border-radius: 1rem;
 }
 
 .video-overlay {
@@ -343,8 +343,8 @@ button:hover {
   background-size: cover;
   cursor: grab;
   background-position: center;
-  width: 80%;
   position: relative;
+  border-radius: 1rem;
 }
 
 .video-overlay2 {
@@ -375,8 +375,8 @@ button:hover {
   background-size: cover;
   cursor: grab;
   background-position: center;
-  width: 80%;
   position: relative;
+  border-radius: 1rem;
 }
 
 .video-overlay3 {
@@ -501,6 +501,10 @@ form #submit {
 form input[type=text], form textarea {
   border: none;
   border-bottom: 1px solid #5C7254;
+  font-size: 16px;
+}
+form #fname, form #lname {
+  height: 2rem;
 }
 
 .contactform-overlay {
@@ -706,6 +710,10 @@ form input[type=text], form textarea {
     margin-left: 5%;
     margin-bottom: 20%;
     margin-top: 20%;
+  }
+
+  .icon-wrapper {
+    flex-direction: column;
   }
 
   .icon-section {
